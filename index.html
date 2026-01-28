@@ -344,6 +344,89 @@
             color: var(--primary);
         }
 
+        /* About Section */
+        .about-section {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-header {
+            max-width: 900px;
+            margin: 0 auto 35px;
+        }
+
+        .about-lead {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .about-subtitle {
+            max-width: 820px;
+            margin: 10px auto 30px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .about-card {
+            background: var(--bg-body);
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3,
+        .about-card h4 {
+            margin-bottom: 12px;
+            color: #1a202c;
+        }
+
+        .about-team,
+        .about-products {
+            margin-top: 40px;
+        }
+
+        .team-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .about-features {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--bg-body);
+        }
+
+        .about-feature span {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .about-stage {
+            margin-top: 18px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
         /* Hero Section */
         .hero {
             text-align: center;
@@ -874,6 +957,132 @@
             unity amongst Muslim families and practice their Islam with ease
         </div>
     </div>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-header text-center">
+                <h2>About Us</h2>
+                <p class="about-lead">
+                    <strong>Clear Business Description:</strong> Ummah Heights is an innovative AI-driven social
+                    impact venture dedicated to empowering the global Muslim community through technology. Our
+                    flagship initiative, the AI for Ummah Project, aims to bridge the gap between sacred Islamic
+                    tradition and modern legal requirements.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>What We Do</h3>
+                    <p>
+                        We are building the world's first comprehensive Islamic Wills App that intelligently adapts to
+                        any legal jurisdiction globally, ensuring that Sharia-compliant wealth distribution is
+                        accessible, legally sound, and easy to manage.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <h3>The Problem We Solve</h3>
+                    <p>
+                        We aim to eliminate the common causes of family division and legal disputes that arise from
+                        poorly planned estates. By automating the complexities of inheritance (Miras), we reduce the
+                        emotional and administrative burden on executors and families during the grieving process.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <h3>Target Audience</h3>
+                    <p>
+                        Global Muslims seeking to fulfill their religious obligations, protect their family's unity,
+                        and ensure their legacy benefits the Muslim Ummah through integrated charitable giving.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-team">
+                <h3 class="text-center">The Team Behind the Project</h3>
+                <p class="about-subtitle">
+                    Our leadership combines deep technical expertise in AI and Cloud infrastructure with extensive
+                    experience in corporate governance and risk management.
+                </p>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <h3>Asif Zaman</h3>
+                        <p style="color: var(--primary); font-weight: bold">
+                            Co-Founder & CEO
+                        </p>
+                        <p style="margin: 10px 0; font-size: 0.9rem">
+                            <strong>Background:</strong> An experienced leader in product management, tech/IT cloud, AI,
+                            risk, and data governance. Asif brings a robust background in navigating complex regulatory
+                            environments to ensure the platform meets the highest standards of security and compliance.
+                        </p>
+                        <p style="margin: 10px 0; font-size: 0.9rem">
+                            <strong>Profile:</strong>
+                            <a href="https://www.linkedin.com/in/asif-zaman-864b8b76/" target="_blank"
+                                style="color: var(--primary)">Connect on LinkedIn &rarr;</a>
+                        </p>
+                    </div>
+                    <div class="founder-card">
+                        <h3>Rezaul Karim</h3>
+                        <p style="color: var(--primary); font-weight: bold">
+                            Co-Founder & CTO
+                        </p>
+                        <p style="margin: 10px 0; font-size: 0.9rem">
+                            <strong>Background:</strong> A specialist in scalable architecture with over 6 years of
+                            experience building AI-driven solutions and cloud-native applications. Rezaul leads the
+                            technical development of our proprietary AI agents and secure document infrastructure.
+                        </p>
+                        <p style="margin: 10px 0; font-size: 0.9rem">
+                            <strong>Profile:</strong>
+                            <a href="https://www.linkedin.com/in/rezaul-karim-masum/" target="_blank"
+                                style="color: var(--primary)">Connect on LinkedIn &rarr;</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-products">
+                <h3 class="text-center">Products & Services</h3>
+                <p class="about-subtitle">
+                    Our primary offering is the Islamic Wills Platform, a digital ecosystem designed to handle the
+                    entire lifecycle of a Muslim's estate planning.
+                </p>
+                <div class="about-card">
+                    <h4>The Islamic Wills App</h4>
+                    <p>
+                        A smart application that uses AI Agent Technology to guide users through personalized
+                        questionnaires, generating wills that are both Sharia-compliant and legally valid in their
+                        specific country.
+                    </p>
+                    <h4>Key Features:</h4>
+                    <ul class="about-features">
+                        <li class="about-feature">
+                            <span>🤖</span>
+                            <div><strong>AI Compliance Agent:</strong> Semi-automated guidance to ensure all inheritance
+                                calculations follow authentic Islamic principles.</div>
+                        </li>
+                        <li class="about-feature">
+                            <span>⚖️</span>
+                            <div><strong>Legal Review Integration:</strong> A marketplace of licensed estate lawyers who
+                                can review and sign off on documents directly within the app.</div>
+                        </li>
+                        <li class="about-feature">
+                            <span>🔒</span>
+                            <div><strong>Secure "Source of Truth":</strong> Encrypted cloud storage with full audit
+                                trails and version history to prevent the loss or tampering of physical copies.</div>
+                        </li>
+                        <li class="about-feature">
+                            <span>🎮</span>
+                            <div><strong>Gamified Learning:</strong> An interactive educational module with avatars and
+                                leaderboards to help users learn the importance of Islamic inheritance in an engaging
+                                way.</div>
+                        </li>
+                    </ul>
+                    <p class="about-stage"><strong>Current Stage:</strong> Beta / Early Access. We are currently
+                        invite-only as we refine our MVP (Minimum Viable Product) through community feedback. We are
+                        actively building partnerships with law firms, accounting practices, and Islamic charities to
+                        provide a holistic estate planning experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="hero" class="hero">
         <div class="container">

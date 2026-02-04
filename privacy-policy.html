@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Ummah Heights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        /* Copied VS styles from index.html to maintain consistency */
+        :root {
+            /* Light Theme Palette */
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --primary: #71BC78;
+            /* Emerald Green */
+            --primary-hover: #059669;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --accent-yellow: #fbbf24;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header-socials {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .header-socials .social-icon {
+            background-color: #edf2f7;
+            color: var(--text-main);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .header-socials .social-icon:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-socials {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b1120;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            background: rgba(255, 255, 255, 0.1);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* Privacy Policy Specific Styles */
+        .page-content {
+            padding: 60px 0;
+            min-height: 80vh;
+        }
+
+        .policy-container {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .policy-section {
+            margin-bottom: 35px;
+        }
+
+        .policy-section h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .highlight-link {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .highlight-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://ummah-heights.netlify.app/Assets/UH.png" alt="Ummah Heights Logo" />
+                <span>Ummah Heights</span>
+            </a>
+            <nav>
+                <div class="header-socials">
+                    <a href="mailto:aiforummah57@gmail.com" class="social-icon" title="Email Us"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.youtube.com/channel/UCi-o1LBh9Y6IpDLcHO8SH1Q" target="_blank"
+                        class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61568963828907" target="_blank" class="social-icon"
+                        title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ummah_heights/" target="_blank" class="social-icon"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Ummah_heights" target="_blank" class="social-icon" title="Twitter / X"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/asif-zaman-864b8b76/" target="_blank" class="social-icon"
+                        title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="policy-container">
+                <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Ummah Heights Privacy Policy</h1>
+                <p class="last-updated">Last Updated: 4 February 2026</p>
+
+                <div class="policy-section">
+                    <h2>Our Commitment to Your Privacy</h2>
+                    <p>At Ummah Heights, we know that your family and your faith are your most important priorities.
+                        Because we help you create Islamic Wills using AI, we handle very personal information. We take
+                        our responsibility to protect that data seriously.</p>
+                    <p>This policy explains what we do with your information. We have reviewed our practices to make
+                        sure we follow Australian privacy laws and keep your trust.</p>
+                    <p>This Privacy Policy is designed to comply with the Australian Privacy Principles (APPs) as set
+                        out in the Privacy Act 1988 (Cth):<br>
+                        <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles" target="_blank"
+                            class="highlight-link">https://www.oaic.gov.au/privacy/australian-privacy-principles</a>
+                    </p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>1. The Personal Information We Collect</h2>
+                    <p>We only collect information that is necessary to build your Islamic Will and provide our
+                        services. This includes:</p>
+                    <ul>
+                        <li><strong>Who you are:</strong> Your name, birthday, gender, and contact details (like email
+                            and address).</li>
+                        <li><strong>Your family:</strong> Details about your spouse, children, and other people you want
+                            to name in your Will.</li>
+                        <li><strong>Your finances:</strong> Information about your house, bank accounts, and
+                            investments.</li>
+                        <li><strong>Your faith (Sensitive Information):</strong> To make sure your Will is
+                            Sharia-compliant, we record your religious affiliation as a Muslim. We only collect this
+                            because you have asked us to help with an Islamic Will.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. How We Collect and Hold Your Information</h2>
+                    <p>We collect information directly from you in two main ways:</p>
+                    <ul>
+                        <li><strong>Forms and Sign-ups:</strong> When you join our community or register for the app.
+                        </li>
+                        <li><strong>AI Questionnaires:</strong> When you talk to our AI Agents or chatbots to provide
+                            details for your Will.</li>
+                    </ul>
+                    <p><strong>How we hold it:</strong> We store your information in secure, encrypted cloud databases.
+                        We use "audit trails," which means we keep a clear record of any changes made to your Will so it
+                        remains the "Source of Truth."</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. Why We Collect, Use, and Disclose Your Information</h2>
+                    <p>We use your data for three main reasons:</p>
+                    <ul>
+                        <li><strong>To build your Will:</strong> To calculate how your wealth should be shared according
+                            to Islamic principles and your local laws.</li>
+                        <li><strong>To improve our AI:</strong> To make our chatbots smarter and more helpful for the
+                            whole Ummah.</li>
+                        <li><strong>To connect you with experts:</strong> If you choose, we share your data with
+                            licensed estate lawyers so they can review and sign your Will.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Sending Information Overseas</h2>
+                    <p>Ummah Heights is a global project. While we are based in Australia, we may use secure cloud
+                        storage or technical tools located in other countries. When we send your data overseas, we make
+                        sure those providers have high security standards that match Australian laws.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. How You Can Access or Fix Your Information</h2>
+                    <p>You own your data. You can ask to see the information we have about you at any time. If something
+                        is wrong (like a typo in your address or a change in your assets), just let us know and we will
+                        fix it.</p>
+                    <p>To make a request, email our Privacy Officer (details below).</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. How to Submit a Complaint</h2>
+                    <p>If you feel we haven't protected your privacy properly, please tell us. We want to fix it.</p>
+                    <p><strong>Step 1:</strong> Email our Privacy Officer at the address below.</p>
+                    <p><strong>Step 2:</strong> We will look into your concern and get back to you within 30 days.</p>
+                    <p><strong>Step 3:</strong> If you are still not happy, you can contact the Office of the Australian
+                        Information Commissioner (OAIC) at <a href="http://www.oaic.gov.au" target="_blank"
+                            class="highlight-link">www.oaic.gov.au</a>.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Privacy Officer Contact Details</h2>
+                    <p>If you have any questions or want to update your info, please contact:</p>
+                    <ul>
+                        <li><strong>Name:</strong> Asif Zaman</li>
+                        <li><strong>Email:</strong> <a href="mailto:admin@ummah-heights.com"
+                                class="highlight-link">admin@ummah-heights.com</a></li>
+                        <li><strong>Business Website:</strong> <a href="https://ummah-heights.com/" target="_blank"
+                                class="highlight-link">https://ummah-heights.com/</a></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. Keeping This Policy Up to Date</h2>
+                    <p>We don't use generic templates. This policy was written specifically for Ummah Heights. We review
+                        it regularly. If we change how we handle your data, we will update this page. You can always
+                        find the latest version here on our website for free.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 15px;">
+                        Email: aiforummah57@gmail.com
+                    </p>
+                    <div class="social-icons">
+                        <a href="mailto:aiforummah57@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.youtube.com/channel/UCi-o1LBh9Y6IpDLcHO8SH1Q" target="_blank"
+                            class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61568963828907" target="_blank"
+                            class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ummah_heights/" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/Ummah_heights" target="_blank" class="social-icon"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/asif-zaman-864b8b76/" target="_blank"
+                            class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#pitch-deck">Pitch Deck</a></li>
+                        <li><a href="index.html#features">Services</a></li>
+                        <li><a href="index.html#founders">Our Founders</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank">Register for App</a></li>
+                        <li><a href="https://www.launchgood.com/v4/campaign/ai_for_ummah_project_islamic_wills_app"
+                                target="_blank">Support Project</a></li>
+                        <li><a href="https://forms.gle/jft9QoDJVzQHyco96" target="_blank">Investment Opportunities</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 Ummah Heights. All rights reserved. Powered by AI for Ummah Project.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -427,6 +427,109 @@
             color: var(--text-main);
         }
 
+        .product-proof-section {
+            background-color: var(--bg-body);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .product-proof-intro {
+            max-width: 820px;
+            margin: 0 auto 35px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .product-proof-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .product-proof-visual,
+        .product-proof-details {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .product-proof-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .product-proof-caption {
+            padding: 18px 22px 22px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .product-proof-details {
+            padding: 28px;
+        }
+
+        .proof-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0 22px;
+        }
+
+        .proof-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .workflow-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+            margin: 22px 0;
+        }
+
+        .workflow-step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 14px;
+            border-radius: 12px;
+            background: var(--bg-body);
+            border: 1px solid var(--border);
+        }
+
+        .workflow-step-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .product-proof-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
         /* Hero Section */
         .hero {
             text-align: center;
@@ -869,6 +972,10 @@
                 gap: 15px;
             }
 
+            .product-proof-grid {
+                grid-template-columns: 1fr;
+            }
+
             .pain-list {
                 grid-template-columns: 1fr;
             }
@@ -928,12 +1035,12 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <img src="https://ummah-heights.netlify.app/Assets/UH.png" alt="Ummah Heights Logo" />
+                <img src="Assets/UH.png" alt="Ummah Heights Logo" />
                 <span>Ummah Heights</span>
             </div>
             <nav>
                 <div class="header-socials">
-                    <a href="mailto:aiforummah57@gmail.com" class="social-icon" title="Email Us"><i
+                    <a href="mailto:admin@ummah-heights.com" class="social-icon" title="Email Us"><i
                             class="fas fa-envelope"></i></a>
                     <a href="https://www.youtube.com/channel/UCi-o1LBh9Y6IpDLcHO8SH1Q" target="_blank"
                         class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -965,8 +1072,8 @@
                 <p class="about-lead">
                     <strong>Clear Business Description:</strong> Ummah Heights is an innovative AI-driven social
                     impact venture dedicated to empowering the global Muslim community through technology. Our
-                    flagship initiative, the AI for Ummah Project, aims to bridge the gap between sacred Islamic
-                    tradition and modern legal requirements.
+                    flagship initiative, the AI for Ummah Project, bridges the gap between sacred Islamic tradition,
+                    modern legal requirements, and secure cloud delivery through a working Islamic wills platform.
                 </p>
             </div>
 
@@ -996,7 +1103,7 @@
                 </div>
             </div>
 
-            <div class="about-team">
+            <div class="about-team" id="founders">
                 <h3 class="text-center">The Team Behind the Project</h3>
                 <p class="about-subtitle">
                     Our leadership combines deep technical expertise in AI and Cloud infrastructure with extensive
@@ -1049,7 +1156,8 @@
                     <p>
                         A smart application that uses AI Agent Technology to guide users through personalized
                         questionnaires, generating wills that are both Sharia-compliant and legally valid in their
-                        specific country.
+                        specific country. Our MVP is live in a controlled staging environment and already includes a
+                        document builder, questionnaire workflows, document management, and role-based user access.
                     </p>
                     <h4>Key Features:</h4>
                     <ul class="about-features">
@@ -1069,16 +1177,22 @@
                                 trails and version history to prevent the loss or tampering of physical copies.</div>
                         </li>
                         <li class="about-feature">
+                            <span>☁️</span>
+                            <div><strong>Cloud-Native Operations:</strong> Built as a secure web platform with staging
+                                access, centralized document workflows, and infrastructure ready to scale AI-driven
+                                compliance support.</div>
+                        </li>
+                        <li class="about-feature">
                             <span>🎮</span>
                             <div><strong>Gamified Learning:</strong> An interactive educational module with avatars and
                                 leaderboards to help users learn the importance of Islamic inheritance in an engaging
                                 way.</div>
                         </li>
                     </ul>
-                    <p class="about-stage"><strong>Current Stage:</strong> Beta / Early Access. We are currently
-                        invite-only as we refine our MVP (Minimum Viable Product) through community feedback. We are
-                        actively building partnerships with law firms, accounting practices, and Islamic charities to
-                        provide a holistic estate planning experience.</p>
+                    <p class="about-stage"><strong>Current Stage:</strong> Active MVP / controlled staging rollout. We
+                        are onboarding early users in a managed environment while refining the AI-assisted workflow,
+                        legal review partnerships, and secure document lifecycle with community and professional
+                        feedback.</p>
                 </div>
             </div>
         </div>
@@ -1088,8 +1202,8 @@
         <div class="container">
             <h1>Uniting Families Through Islamic Wills</h1>
             <p>
-                Join the AI for Ummah Project to build the first Islamic
-                Wills app that supports any country's legal jurisdiction.
+                Explore our working Islamic Wills platform and join the AI for Ummah Project as we build the first
+                Islamic wills app designed to support any country's legal jurisdiction.
             </p>
             <div style="
                         display: flex;
@@ -1097,7 +1211,83 @@
                         justify-content: center;
                         flex-wrap: wrap;
                     ">
-                <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn">Register for Early Access</a>
+                <a href="https://app-staging.ummah-heights.com/" target="_blank" class="btn">Open Staging App</a>
+                <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn btn-outline">Request Access</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-proof" class="product-proof-section">
+        <div class="container">
+            <h2 class="text-center">Product Proof</h2>
+            <p class="product-proof-intro">
+                Ummah Heights is not a concept page only. The Islamic Wills App is already available in a controlled
+                staging environment with live dashboard screens, document workflows, questionnaire configuration, and
+                secure user access.
+            </p>
+
+            <div class="product-proof-grid">
+                <div class="product-proof-visual">
+                    <img src="Assets/dashboard-preview.jpg" alt="Ummah Heights Islamic Wills App dashboard preview" />
+                    <div class="product-proof-caption">
+                        Dashboard preview from our staging application showing template management, assigned wills,
+                        document workflows, and user-plan controls.
+                    </div>
+                </div>
+
+                <div class="product-proof-details">
+                    <h3>How The MVP Works</h3>
+                    <p>
+                        The current product stack is focused on helping Muslim families create, manage, and maintain
+                        legally structured Islamic wills through guided workflows and secure digital records.
+                    </p>
+
+                    <div class="proof-badges">
+                        <div class="proof-badge"><i class="fas fa-check-circle"></i> Working staging app</div>
+                        <div class="proof-badge"><i class="fas fa-check-circle"></i> Role-based user access</div>
+                        <div class="proof-badge"><i class="fas fa-check-circle"></i> Document lifecycle tools</div>
+                    </div>
+
+                    <ul class="workflow-list">
+                        <li class="workflow-step">
+                            <div class="workflow-step-number">1</div>
+                            <div>
+                                <strong>User onboarding and profile setup</strong>
+                                <p>Users access a structured dashboard environment with account-level permissions and
+                                    plan controls.</p>
+                            </div>
+                        </li>
+                        <li class="workflow-step">
+                            <div class="workflow-step-number">2</div>
+                            <div>
+                                <strong>Questionnaire-driven will creation</strong>
+                                <p>Guided questionnaires collect the details required to generate Sharia-aware will
+                                    documents and supporting records.</p>
+                            </div>
+                        </li>
+                        <li class="workflow-step">
+                            <div class="workflow-step-number">3</div>
+                            <div>
+                                <strong>Document builder and secure storage</strong>
+                                <p>Templates, document libraries, assigned files, and audit-friendly storage create a
+                                    single digital source of truth.</p>
+                            </div>
+                        </li>
+                        <li class="workflow-step">
+                            <div class="workflow-step-number">4</div>
+                            <div>
+                                <strong>AI and compliance roadmap</strong>
+                                <p>The platform is being expanded with AI-assisted compliance checks, lawyer review
+                                    integrations, and scalable cloud workflows.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="product-proof-actions">
+                        <a href="https://app-staging.ummah-heights.com/" target="_blank" class="btn">View Staging Platform</a>
+                        <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn btn-outline">Request Early Access</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1193,7 +1383,8 @@
                 <p style="font-weight: 600; color: var(--primary)">
                     See detailed product AI features below!
                 </p>
-                <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn">Register Waiting List</a>
+                <a href="https://app-staging.ummah-heights.com/" target="_blank" class="btn">View Staging App</a>
+                <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn btn-outline">Request Access</a>
             </div>
         </div>
     </section>
@@ -1420,8 +1611,8 @@
                             tag our channels, and challenge your friends and family!
                         </p>
                     </div>
-                    <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" class="btn" target="_blank" style="margin: 20px 5px;">
-                        Register Waiting List for Free Wills App Access
+                    <a href="https://app-staging.ummah-heights.com/" class="btn" target="_blank" style="margin: 20px 5px;">
+                        Explore The Staging App
                     </a>
                 </div>
             </div>
@@ -1482,9 +1673,8 @@
             </div>
 
             <div class="text-center">
-                <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank" class="btn btn-action-large">REGISTER
-                    WAITING
-                    LIST FOR FREE WILLS APP ACCESS</a>
+                <a href="https://app-staging.ummah-heights.com/" target="_blank" class="btn btn-action-large">OPEN
+                    STAGING APP</a>
             </div>
         </div>
     </section>
@@ -1499,10 +1689,10 @@
                                 font-size: 0.9rem;
                                 margin-bottom: 15px;
                             ">
-                        Email: aiforummah57@gmail.com
+                        Email: admin@ummah-heights.com
                     </p>
                     <div class="social-icons">
-                        <a href="mailto:aiforummah57@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:admin@ummah-heights.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                         <a href="https://www.youtube.com/channel/UCi-o1LBh9Y6IpDLcHO8SH1Q" target="_blank"
                             class="social-icon"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61568963828907" target="_blank"
@@ -1531,7 +1721,10 @@
                     <h4>Resources</h4>
                     <ul>
                         <li>
-                            <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank">Register for App</a>
+                            <a href="https://app-staging.ummah-heights.com/" target="_blank">Open Staging App</a>
+                        </li>
+                        <li>
+                            <a href="https://forms.gle/hzVdFPZCiXeh4zgCA" target="_blank">Request Early Access</a>
                         </li>
                         <li>
                             <a href="https://www.launchgood.com/v4/campaign/ai_for_ummah_project_islamic_wills_app"
